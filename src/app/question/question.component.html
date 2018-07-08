@@ -1,0 +1,4 @@
+Q{{QuestionProp.id}}: {{QuestionProp.QuetionText}}
+  <div *ngFor ='let answer of QuestionProp.answers'>
+    <input type="radio" [name]="'Question ' + QuestionProp.id"> {{answer.text}}
+  </div>

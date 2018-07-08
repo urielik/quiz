@@ -1,0 +1,9 @@
+<table border="2px">
+  <tr>
+    <div *ngFor='let item of question'>
+      <td>
+        <app-question [QuestionProp]="item"></app-question>
+      </td>
+    </div>
+  </tr>
+</table>
