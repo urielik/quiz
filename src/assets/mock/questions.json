@@ -1,0 +1,8 @@
+[
+    {"QuetionText": "?היום יום ראשון", "answers": 
+     [{"id": 1, "text": "כן"},{"id": 2, "text": "לא"}], "id": 1},
+     {"QuetionText": "?עכשיו לילה", "answers": 
+     [{"id": 2, "text": "כן"},{"id": 2, "text": "לא"}], "id": 2},
+     {"QuetionText": "?אתה רעב", "answers": 
+     [{"id": 3, "text": "כן"},{"id": 2, "text": "לא"}], "id": 3}
+]
