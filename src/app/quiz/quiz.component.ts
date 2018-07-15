@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from '../models/question';
+import { DataService } from '../service/data.service';
+
 
 @Component({
   selector: 'app-quiz',
@@ -8,19 +10,15 @@ import { Question } from '../models/question';
 })
 export class QuizComponent implements OnInit {
 
-  question : Question[] = [
-    {QuetionText: "?היום יום ראשון", answers: 
-     [{id: 1, text: "כן"},{id: 2, text: "לא"}], id: 1},
-     {QuetionText: "?עכשיו לילה", answers: 
-     [{id: 2, text: "כן"},{id: 2, text: "לא"}], id: 2},
-     {QuetionText: "?אתה רעב", answers: 
-     [{id: 3, text: "כן"},{id: 2, text: "לא"}], id: 3}
-  ]
-
-  constructor() { }
+  question : Question;
+  
+  constructor(private data: DataService) {
+    this.data.getData().subscribe(data =>{
+      console.log(data);
+      this.question = data;
+    });
+   }
 
   ngOnInit() {
-
   }
-
 }
